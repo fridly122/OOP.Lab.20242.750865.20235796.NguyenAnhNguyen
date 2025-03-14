@@ -1,0 +1,22 @@
+﻿Answers for Lab01 Questions
+6.1
+-Nếu người dùng chọn “Cancel” màn hình Dialog sẽ hiện ra giống với khi chọn “No”
+-Để có thể chỉ xuất hiện 2 lựa chọn ta có thể dùng đoạn code sau
+import javax.swing.JOptionPane;
+
+
+public class CustomOptionPane {
+    public static void main(String[] args) {
+        Object[] options = {"Yes", "No"};  // Định nghĩa nhãn nút tùy chỉnh
+        int choice = JOptionPane.showOptionDialog(null, 
+                "Bạn có muốn tiếp tục?", 
+                "Hộp thoại tùy chỉnh", 
+                JOptionPane.DEFAULT_OPTION, 
+                JOptionPane.QUESTION_MESSAGE, 
+                null, options, options[0]);
+
+
+        JOptionPane.showMessageDialog(null, "Bạn đã chọn: " + options[choice]);
+    }
+}
+Hàm J0ptionPane.show0ptionDialog() cho phép ta tùy chỉnh các lựa chọn của người dùng có thể chọn, các lựa chọn này có thể được định nghĩa riêng thay vì chỉ là “Cancel”, “No”, “Yes”.
