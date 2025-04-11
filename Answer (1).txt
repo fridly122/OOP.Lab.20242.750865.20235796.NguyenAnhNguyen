@@ -1,0 +1,18 @@
+﻿Bai 10:
+Có, Java cho phép tạo nhiều constructor nếu danh sách tham số khác nhau.
+Bài 15:
+Java là ngôn ngữ lập trình Pass by Value.
+Với biến đối tượng, Java truyền bản sao của tham chiếu (không phải bản thân object, cũng không phải pass by reference thật sự).
+
+
+1. Tại sao sau khi gọi swap(jungleDVD, cinderellaDVD), tiêu đề của hai đối tượng vẫn giữ nguyên?
+
+
+Vì Java truyền tham trị. Hàm swap chỉ hoán đổi bản sao tham chiếu, không làm thay đổi hai đối tượng thật ngoài hàm.
+
+
+2. Tại sao sau khi gọi changeTitle(jungleDVD, cinderellaDVD.getTitle()), tiêu đề của jungleDVD bị thay đổi?
+
+
+Vì tham chiếu truyền vào vẫn trỏ tới đối tượng thật, nên khi gọi setTitle, tiêu đề của đối tượng thật bị thay đổi. Việc gán dvd = new DigitalVideoDisc(...) chỉ thay đổi tham chiếu cục bộ trong hàm.
+Bài 16:
